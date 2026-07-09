@@ -1,0 +1,42 @@
+[2026-07-09 03:43:48 UTC] vlib work && vlog '-timescale' '1ns/1ns' design.sv testbench.sv  && vsim -c -do "vsim +access+r; run -all; exit"  
+VSIMSA: Configuration file changed: `/home/runner/library.cfg'
+ALIB: Library "work" attached.
+work = ./work/work.lib
+MESSAGE "Unit top modules: reverse_arrays."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+done
+# Aldec, Inc. Riviera-PRO version 2025.04.139.9738 built for Linux64 on May 30, 2025.
+# HDL, SystemC, and Assertions simulator, debugger, and design environment.
+# (c) 1999-2025 Aldec, Inc. All rights reserved.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ns.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.1 [s]
+# SLP: Finished : 0.1 [s]
+# SLP: 0 primitives and 1 (100.00%) other processes in SLP
+# SLP: 3 (75.00%) signals in SLP and 1 (25.00%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Riviera-PRO EDU Edition. The performance of simulation is reduced.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4537 kB (elbread=427 elab2=4104 kernel=6 sdf=0)
+# KERNEL: ASDB file was created in location /home/runner/dataset.asdb
+# KERNEL: Before reversing: '{2, 5, 7, 9, 10}
+# KERNEL: after reversing: '{10, 9, 7, 5, 2}
+# KERNEL: Again reversing: '{2, 5, 7, 9, 10}
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+# VSIM: Simulation has finished.
+Finding user-specified file...
+File not found. User-specified file will not open. You requested to open the file 'ouput_rotate_arrays' but your code does not create a file with this name. 
+Done
