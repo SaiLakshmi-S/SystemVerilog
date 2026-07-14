@@ -1,0 +1,42 @@
+class StudentMarks;
+    string name;
+    int marks[];
+    
+    // DEEP COPY method
+    function StudentMarks deep_copy();
+        StudentMarks s = new();
+        
+        // Copy name (simple value)
+        s.name = this.name;
+        
+        // Copy marks array element by element
+        s.marks = new[this.marks.size()];
+        foreach(this.marks[i])
+            s.marks[i] = this.marks[i];
+        
+        return s;
+    endfunction
+endclass
+
+module test;
+    initial begin
+        StudentMarks s1, s2;
+        
+        s1 = new();
+        s1.name = "John";
+        s1.marks = new[3];
+        s1.marks = '{90, 85, 88};
+        
+        // DEEP COPY
+        s2 = s1.deep_copy();
+        
+        s2.name = "Mike";
+        s2.marks[0] = 100;
+        
+        $display("s1 name: %s", s1.name);      // John
+        $display("s1 marks[0]: %0d", s1.marks[0]);  // 90 (unchanged!)
+        
+        $display("s2 name: %s", s2.name);      // Mike
+        $display("s2 marks[0]: %0d", s2.marks[0]);  // 100
+    end
+endmodule
