@@ -15,3 +15,7 @@ vif.q<= vif.d;
 end
 
 endmodule
+
+
+## OUTPUT:
+ 
